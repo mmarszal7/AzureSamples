@@ -4,6 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using TransportType = Microsoft.Azure.Devices.Client.TransportType;
@@ -19,20 +20,20 @@ namespace EventHubsDemo
         public static async Task RunAsync([TimerTrigger("*/15 * * * * *")]TimerInfo myTimer, ILogger log)
         {
             Logger = log;
-            var message = new
+            var messages = new List<TelemetryMessage>()
             {
-                //Time Series ID
-                device = "Device" + DateTime.Now.Minute,
-                //Time Series Timestamp
-                timestamp = DateTime.Now.ToString(),
-                temperature = rand.Next(),
-                humidity = rand.Next()
+                new TelemetryMessage(){ SensorName = "Temperature", Value = rand.Next()},
+                new TelemetryMessage(){ SensorName = "Humidity", Value = rand.Next()},
             };
-            var json = JsonConvert.SerializeObject(message);
-            var bytes = Encoding.UTF8.GetBytes(json);
 
-            await SendMessageToEventHub(bytes);
-            await SendMessageToIotHub(bytes);
+            messages.ForEach(async m =>
+            {
+                var json = JsonConvert.SerializeObject(m);
+                var bytes = Encoding.UTF8.GetBytes(json);
+
+                //await SendMessageToEventHub(bytes);
+                await SendMessageToIotHub(bytes);
+            });
         }
 
         private static async Task SendMessageToEventHub(byte[] bytes)
