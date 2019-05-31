@@ -1,0 +1,7 @@
+﻿SELECT *
+INTO Output
+FROM Input
+
+SELECT *, udf.guid("") as RowKey
+INTO TableStorage
+FROM Input

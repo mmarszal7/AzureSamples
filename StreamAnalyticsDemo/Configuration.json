@@ -1,0 +1,19 @@
+﻿{
+  "DataLocale": "en-US",
+  "OutputErrorPolicy": "Drop",
+  "EventsLateArrivalMaxDelayInSeconds": 5,
+  "EventsOutOfOrderMaxDelayInSeconds": 0,
+  "EventsOutOfOrderPolicy": "Adjust",
+  "StreamingUnits": 3,
+  "CompatibilityLevel": "1.0",
+  "UseSystemAssignedIdentity": false,
+  "GlobalStorageAccountName": "demofunctionapp8a16",
+  "GlobalStorageAccountKey": null,
+  "AccountName": "demofunctionapp8a16",
+  "AccountKey": null,
+  "ContainerName": "azure-webjobs-hosts",
+  "Path": "UserCustomCode.zip",
+  "UploadFromLocal": false,
+  "DataSourceCredentialDomain": null,
+  "ScriptType": "JobConfig"
+}

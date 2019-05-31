@@ -1,20 +1,36 @@
 # Azure Samples
 
-Collection of .NET projects caintaining code examples for selected Azure services (Functions, EventHubs, IoT, AI etc.)
+Collection of .NET projects caintaining code examples for selected Azure services (Functions, Event Hubs, Stream Analytics, IoT, AI etc.)
 
 [Microsoft's GitHub repo with Azure-Samples](https://github.com/Azure-Samples/azure-iot-samples-csharp)
 
+# Done:
+
+**1. EventHubsDemo - device simulator for IoT Hub and Event Hub**:
+- Time triggered (CRON) **Azure Function**
+- Usage of .NET APIs for **Iot Hub** and **Event Hub**
+
+**2. StreamAnalyticsDemo**:
+  - [**Stream Analytics** quick start](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-vs)
+  - Writing historical data to **Blob** and **Table Storages**
+  - Using **Key Vault** to manage secrets
+  - **Logic App** to send email every time new blob is created
+ 
 # Plans:
+
 **IoT**:
-- Example from [Pluralsight course](https://app.pluralsight.com/library/courses/microsoft-azure-iot-solutions-creating/table-of-contents)
-- [Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-dotnet-standard-getstarted-send) usage in TSI
-- [Connecting real device to IotHub](https://www.telerik.com/blogs/diy-iot-for-azure) (NodeMCU with DHT11 sensor)
-- Make use of Logic Apps, Key Vault and 
+  - TSI - How to structure data inside TSI
+  - Read [Microsoft IoT architecture guideline](http://aka.ms/iotrefarchitecture)
+  - [Connect real device to IotHub](https://www.telerik.com/blogs/diy-iot-for-azure) (NodeMCU with DHT11 sensor)
+
+**ARM**:
+  - IaC - Infrastracture as a Code - version control for ARM templates 
 
 **Mobile**:
-- Send [location data](https://developer.xamarin.com/samples/mobile/BackgroundLocationDemo/) from [Android Service](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/services/) to Event Hub
+  - Send [location data](https://developer.xamarin.com/samples/mobile/BackgroundLocationDemo/) from [Android Service](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/services/) to Event Hub
 
 **Data**:
+  - Play with Microsoft AdventureWorks DB 
   - Data Factory based on AdventureWorks DB 
 
 **AI**:

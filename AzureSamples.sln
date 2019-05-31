@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{E6C563F2-BDC2-4A24-ACBF-01715157DCBB}") = "StreamAnalyticsDemo", "StreamAnalyticsDemo\StreamAnalyticsDemo.asaproj", "{A18035DC-4152-4E8F-849A-6CD556D677CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{C021159C-81C3-4D3A-8007-543E9287368B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C021159C-81C3-4D3A-8007-543E9287368B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C021159C-81C3-4D3A-8007-543E9287368B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

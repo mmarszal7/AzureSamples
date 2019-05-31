@@ -1,0 +1,25 @@
+﻿{
+  "EventHubProperties": null,
+  "BlobStorageProperties": null,
+  "SQLDatabaseProperties": null,
+  "TableStorageProperties": {
+    "AccountKey": null,
+    "AccountName": "demofunctionapp8a16",
+    "BatchSize": 3,
+    "ColumnsToRemove": null,
+    "PartitionKey": "SensorName",
+    "RowKey": "RowKey",
+    "Table": "streamAnalyticsTable"
+  },
+  "ServiceBusQueueProperties": null,
+  "ServiceBusTopicProperties": null,
+  "DocumentDbProperties": null,
+  "PowellBIProperties": null,
+  "AzureDataLakeStoreProperties": null,
+  "AzureFunctionProperties": null,
+  "DataSourceCredentialDomain": null,
+  "Name": "TableStorage",
+  "DataSourceType": "Table Storage",
+  "Serialization": null,
+  "ScriptType": "Output"
+}

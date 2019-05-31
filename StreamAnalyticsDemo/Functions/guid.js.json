@@ -1,0 +1,12 @@
+﻿{
+  "Name": "guid",
+  "OutputType": "nvarchar(max)",
+  "Type": "Scalar",
+  "FunctionInputs": [
+    {
+      "DataType": "any",
+      "IsConfigurationParameter": null
+    }
+  ],
+  "ScriptType": "JSFunction"
+}
