@@ -15,12 +15,16 @@ Collection of .NET projects caintaining code examples for selected Azure service
   - Writing historical data to **Blob** and **Table Storages**
   - Using **Key Vault** to manage secrets
   - **Logic App** to send email every time new blob is created
+
+**3. Azure Active Directory Authentication**:
+-  Set up secure API with Azure AD
+-  Communication with Secured API (get token & set auth header)
+-  Swagger Intergration for secured API
  
 # Plans:
 
 **IoT**:
   - TSI - How to structure data inside TSI
-  - Read [Microsoft IoT architecture guideline](http://aka.ms/iotrefarchitecture)
   - [Connect real device to IotHub](https://www.telerik.com/blogs/diy-iot-for-azure) (NodeMCU with DHT11 sensor)
 
 **ARM**:
