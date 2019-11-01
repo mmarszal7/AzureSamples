@@ -38,9 +38,10 @@ namespace EventHubsDemo
 
         private static async Task SendMessageToEventHub(byte[] bytes)
         {
+            var hubName = "demo-tsi-hub";
             var connectionStringBuilder = new EventHubsConnectionStringBuilder(Environment.GetEnvironmentVariable("EventHubConnectionString"))
             {
-                EntityPath = "demo-tsi-hub"
+                EntityPath = hubName
             };
             var eventHubClient = EventHubClient.CreateFromConnectionString(connectionStringBuilder.ToString());
             await eventHubClient.SendAsync(new EventData(bytes));
@@ -50,8 +51,12 @@ namespace EventHubsDemo
         private static async Task SendMessageToIotHub(byte[] bytes)
         {
             var iotHubClient = DeviceClient.CreateFromConnectionString(Environment.GetEnvironmentVariable("IotHubConnectionString"), TransportType.Mqtt);
+            await iotHubClient.SetMethodHandlerAsync("SendMessage", SendMessage, null);
             await iotHubClient.SendEventAsync(new Message(bytes));
             Logger.LogWarning("Sent message to IotHub");
         }
+
+        private static Task<MethodResponse> SendMessage(MethodRequest methodRequest, object userContext) =>
+            Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes("Message: " + Encoding.UTF8.GetString(methodRequest.Data)), 200));
     }
 }

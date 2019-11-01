@@ -3,20 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28822.285
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHubsDemo", "EventHubsDemo\EventHubsDemo.csproj", "{C021159C-81C3-4D3A-8007-543E9287368B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0125FEE4-2F66-42DF-800A-3650466F1AD9}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{E6C563F2-BDC2-4A24-ACBF-01715157DCBB}") = "StreamAnalyticsDemo", "StreamAnalyticsDemo\StreamAnalyticsDemo.asaproj", "{A18035DC-4152-4E8F-849A-6CD556D677CB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActiveDirectory", "ActiveDirectory", "{55EE062A-FD08-4E8A-A9AE-B4357DE72D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveDirectoryAPIdemo", "ActiveDirectoryAPIdemo\ActiveDirectoryAPIdemo.csproj", "{DECEC8C1-1C50-4972-91DE-DEE81913C002}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoT", "IoT", "{E69F6C13-BC15-428A-B272-0A01087AC081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiConsumer", "ApiConsumer\ApiConsumer.csproj", "{2E24D9AC-2FD3-4821-9135-E6B1BA6E465B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActiveDirectoryAPIdemo", "ActiveDirectory\ActiveDirectoryAPIdemo\ActiveDirectoryAPIdemo.csproj", "{9886335E-1134-4838-A86C-777C42389B65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiConsumer", "ActiveDirectory\ApiConsumer\ApiConsumer.csproj", "{8F714510-865B-4647-9D0F-918697463B98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceSimulator", "IoT\DeviceSimulator\DeviceSimulator.csproj", "{32177249-5458-403D-BAC2-D9C346077348}"
+EndProject
+Project("{E6C563F2-BDC2-4A24-ACBF-01715157DCBB}") = "StreamAnalyticsDemo", "IoT\StreamAnalyticsDemo\StreamAnalyticsDemo.asaproj", "{A18035DC-4152-4E8F-849A-6CD556D677CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client2DeviceMessenger", "IoT\Client2DeviceMessenger\Client2DeviceMessenger.csproj", "{98C4AE62-8370-4528-9062-9786CA3924EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadDeviceMessages", "IoT\ReadDeviceMessages\ReadDeviceMessages.csproj", "{B084C068-DE63-48C3-A439-6FB41BA946EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,29 +30,41 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C021159C-81C3-4D3A-8007-543E9287368B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C021159C-81C3-4D3A-8007-543E9287368B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C021159C-81C3-4D3A-8007-543E9287368B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C021159C-81C3-4D3A-8007-543E9287368B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9886335E-1134-4838-A86C-777C42389B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9886335E-1134-4838-A86C-777C42389B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9886335E-1134-4838-A86C-777C42389B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9886335E-1134-4838-A86C-777C42389B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F714510-865B-4647-9D0F-918697463B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F714510-865B-4647-9D0F-918697463B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F714510-865B-4647-9D0F-918697463B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F714510-865B-4647-9D0F-918697463B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32177249-5458-403D-BAC2-D9C346077348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32177249-5458-403D-BAC2-D9C346077348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32177249-5458-403D-BAC2-D9C346077348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32177249-5458-403D-BAC2-D9C346077348}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A18035DC-4152-4E8F-849A-6CD556D677CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DECEC8C1-1C50-4972-91DE-DEE81913C002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DECEC8C1-1C50-4972-91DE-DEE81913C002}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DECEC8C1-1C50-4972-91DE-DEE81913C002}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DECEC8C1-1C50-4972-91DE-DEE81913C002}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E24D9AC-2FD3-4821-9135-E6B1BA6E465B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E24D9AC-2FD3-4821-9135-E6B1BA6E465B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E24D9AC-2FD3-4821-9135-E6B1BA6E465B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E24D9AC-2FD3-4821-9135-E6B1BA6E465B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C4AE62-8370-4528-9062-9786CA3924EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C4AE62-8370-4528-9062-9786CA3924EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C4AE62-8370-4528-9062-9786CA3924EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C4AE62-8370-4528-9062-9786CA3924EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B084C068-DE63-48C3-A439-6FB41BA946EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B084C068-DE63-48C3-A439-6FB41BA946EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B084C068-DE63-48C3-A439-6FB41BA946EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B084C068-DE63-48C3-A439-6FB41BA946EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DECEC8C1-1C50-4972-91DE-DEE81913C002} = {55EE062A-FD08-4E8A-A9AE-B4357DE72D7E}
-		{2E24D9AC-2FD3-4821-9135-E6B1BA6E465B} = {55EE062A-FD08-4E8A-A9AE-B4357DE72D7E}
+		{9886335E-1134-4838-A86C-777C42389B65} = {55EE062A-FD08-4E8A-A9AE-B4357DE72D7E}
+		{8F714510-865B-4647-9D0F-918697463B98} = {55EE062A-FD08-4E8A-A9AE-B4357DE72D7E}
+		{32177249-5458-403D-BAC2-D9C346077348} = {E69F6C13-BC15-428A-B272-0A01087AC081}
+		{A18035DC-4152-4E8F-849A-6CD556D677CB} = {E69F6C13-BC15-428A-B272-0A01087AC081}
+		{98C4AE62-8370-4528-9062-9786CA3924EC} = {E69F6C13-BC15-428A-B272-0A01087AC081}
+		{B084C068-DE63-48C3-A439-6FB41BA946EE} = {E69F6C13-BC15-428A-B272-0A01087AC081}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1ECE931F-6743-4A3D-8637-73D93EF435CA}
